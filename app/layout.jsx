@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="fixed inset-0 bg-gradient-to-b from-sky-100 via-white to-amber-100 -z-10" />
+        <div className="fixed inset-0 bg-white -z-10" />
         <AppProviders>
           {children}
         </AppProviders>
