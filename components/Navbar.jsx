@@ -58,7 +58,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-slate-200">
+    <header className="sticky top-0 z-30 bg-black border-b border-gray-800">
       <div className="max-w-6xl mx-auto px-6 py-3 flex items-center gap-6">
         {/* Logo - Far left */}
         <a href="/" className="flex items-center gap-2">
@@ -70,7 +70,7 @@ export default function Navbar() {
             className="h-11 w-auto"
             priority
           />
-          <span className="text-2xl font-extrabold bg-gradient-to-r from-sky-700 to-sky-900 bg-clip-text text-transparent tracking-tight">Seasoners</span>
+          <span className="text-2xl font-extrabold text-white tracking-tight">Seasoners</span>
         </a>
 
         {/* Profile Dropdown - Next to logo */}
@@ -170,7 +170,7 @@ export default function Navbar() {
         )}
 
         {/* Main navigation - Centered */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700 mx-auto">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300 mx-auto">
           {session && (
             <a href="/list" className="hover:text-sky-700 relative group">
               {t('list')}
@@ -179,9 +179,9 @@ export default function Navbar() {
               )}
             </a>
           )}
-          <a href="/stays" className="hover:text-sky-700">{t('stays')}</a>
-          <a href="/flatshares" className="hover:text-sky-700">🏠 Flatshares</a>
-          <a href="/jobs" className="hover:text-sky-700">{t('jobs')}</a>
+          <a href="/stays" className="hover:text-white">{t('stays')}</a>
+          <a href="/flatshares" className="hover:text-white">🏠 Flatshares</a>
+          <a href="/jobs" className="hover:text-white">{t('jobs')}</a>
           {/* Destinations dropdown */}
           <div className="relative" ref={destinationsRef}>
             <button 
@@ -206,8 +206,8 @@ export default function Navbar() {
               </div>
             )}
           </div>
-          <a href="/agreement" className="hover:text-sky-700">{t('agreement')}</a>
-          <a href="/about" className="hover:text-sky-700">{t('about')}</a>
+          <a href="/agreement" className="hover:text-white">{t('agreement')}</a>
+          <a href="/about" className="hover:text-white">{t('about')}</a>
         </nav>
 
         {/* Right side - Auth or Language */}
@@ -216,7 +216,7 @@ export default function Navbar() {
             <>
               <button
                 onClick={() => signIn()}
-                className="px-3 py-1.5 rounded-md text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
+                className="px-3 py-1.5 rounded-md text-sm font-medium bg-gray-800 hover:bg-gray-700 text-white transition"
               >
                 {t('signIn')}
               </button>
