@@ -124,6 +124,17 @@ export default function Navbar() {
                     )}
                   </a>
 
+                  {userDetails?.id && (
+                    <a
+                      href={`/portfolio/${userDetails.id}`}
+                      className="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
+                      onClick={() => setIsProfileOpen(false)}
+                    >
+                      <span>🌟</span>
+                      <span>My Portfolio</span>
+                    </a>
+                  )}
+
                   <a
                     href="/agreements"
                     className="flex items-center gap-3 px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 transition-colors"
